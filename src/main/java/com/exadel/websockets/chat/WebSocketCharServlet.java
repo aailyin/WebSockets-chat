@@ -123,7 +123,7 @@ public class WebSocketCharServlet extends WebSocketServlet {
         }
 
         private List<String> getActiveUsers() {
-            final List<String> activeUsers = new ArrayList<>();
+            final List<String> activeUsers = new ArrayList<String>();
             for (ChatConnection chatConnection : connections.values()) {
                 activeUsers.add(chatConnection.getUserName());
             }

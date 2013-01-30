@@ -1,0 +1,10 @@
+# ignore class files
+*.class
+
+# ignore target's specific to the project Amgine-exchange
+target
+
+# ignore IDEA project files
+.idea
+*.iml
+
