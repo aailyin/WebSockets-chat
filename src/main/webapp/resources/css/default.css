@@ -9,8 +9,106 @@ input {
     border-radius: 3px;
 }
 
-button, textarea {
+textarea {
     font-family: comic sans ms, sans-serif;
+}
+
+.actionContainer {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+button.secondary {
+    margin-left: 15px;
+    background-color: #959595;
+}
+
+button {
+    font-family: inherit;
+    background-color: #008DDE;
+    color: #FFFFFF;
+    padding: 2px 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin: 0;
+    border-radius: 4px 4px 4px 4px;
+    height: 40px;
+    width: 100px;
+}
+
+#footer {
+    -moz-box-sizing: border-box;
+    background-color: #272727;
+    border-top: 1px solid #403F3D;
+    bottom: 20px;
+    font-size: 14px;
+    height: 59px;
+    left: 0;
+    padding: 15px 50px 0 60px;
+    position: fixed;
+    right: 0;
+    z-index: 6;
+}
+
+#footer > a > .exadel-logo {
+    float: left;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.exadel-logo {
+    background-image: url("../img/exadel_logo.png");
+    display: inline-block;
+    height: 28px;
+    width: 121px;
+    text-indent: -9999px;
+
+}
+
+#links {
+    background: none repeat scroll 0 0 #D2D2D2;
+    bottom: 0;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.3) inset;
+    color: #464646;
+    font-size: 10px;
+    padding: 5px 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 0 -8px;
+    vertical-align: baseline;
+}
+
+body > video.spin {
+    height: auto;
+    -moz-box-sizing: border-box;
+    bottom: 0;
+    min-width: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    font: inherit;
+}
+
+#wrap {
+    bottom: 79px;
+    left: 0;
+    overflow-y: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 div#container {
