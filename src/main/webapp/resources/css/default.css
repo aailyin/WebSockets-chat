@@ -12,11 +12,16 @@ div {
     display: block;
 }
 
+
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 0.75em;
     font: inherit;
     vertical-align: baseline;
     display: block;
@@ -24,7 +29,7 @@ body {
     background: #F4F4F4;
     color: #666;
     font-size: .75em;
-    font-family: BentosSans, "Lucida Grande", "Lucida Sans", sans-serif;
+    font-family: BentonSans, "Lucida Sans", "Lucida Grande", sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
     line-height: 1;
 }
@@ -67,8 +72,8 @@ button {
     background-color: #272727;
     border-top: 1px solid #403F3D;
     bottom: 20px;
-    font-size: 14px;
-    height: 59px;
+    font-size: 1.6em;
+    height: 2.8em;
     left: 0;
     padding: 15px 50px 0 60px;
     position: fixed;
@@ -102,7 +107,7 @@ button {
     text-align: center;
     width: 100%;
     display: block;
-    margin: 0 -8px;
+    margin: 0;
     vertical-align: baseline;
 }
 
@@ -139,12 +144,12 @@ button {
 #beta {
     position: absolute;
     top: 0;
-    bottom: 0;
-    margin-bottom: auto;
-    margin-top: auto;
+    bottom: auto;
+    margin-top: 17em;
     width: 650px;
     margin-left: 10%;
     color: #fff;
+    height: 80%;
 }
 
 h1 {
