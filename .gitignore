@@ -1,0 +1,9 @@
+# ignore class files
+*.class
+
+# ignore target's specific to the project WebSocket-chat
+target
+
+# ignore IDEA project files
+.idea
+*.iml
