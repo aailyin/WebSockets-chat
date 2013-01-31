@@ -16,7 +16,7 @@
   <body class="splash">
     <div id="wrap">
         <video id="splashVideo" class="spin" loop="loop" autoplay="autoplay" tabindex="0">
-            <source type="video/mp4" src="resources/img/video1.mp4.mp4">
+            <source type="video/mp4" src="resources/img/video1.mp4">
             </source>
         </video>
         <div id="beta">
