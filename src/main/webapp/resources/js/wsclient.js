@@ -163,7 +163,18 @@ var wsclient = (function(){
 
     function addMessage (from, message, conversationPanelId) {
         var messages = $('#' + conversationPanelId + ' .messages');
-        $('<div class="message"><span><b>' + from + '</b> dice:</span><p>' + $('<p/>').text(message).html() + '</p></div>').appendTo(messages);
+        var time = new Date();
+        var dd = time.getDate();
+        var mm = time.getMonth()+1;
+        var yyyy = time.getFullYear();
+        if(dd < 10){
+            dd='0'+dd
+        }
+        if(mm < 10){
+            mm = '0'+mm;
+        }
+        time = dd+'/'+mm+'/'+yyyy+' '+time.getHours()+':'+time.getMinutes();
+        $('<div class="message"><span><b>' + from + '</b> said [' + time.valueOf() + ']:</span><p>' + $('<p/>').text(message).html() + '</p></div>').appendTo(messages);
         messages.scrollTop(messages[0].scrollHeight);
         $('#'+conversationPanelId+' textarea').focus();
     }
@@ -198,7 +209,6 @@ var wsclient = (function(){
         return li;
     }
 
-    // metodos publicos
     return {
         connect : connect,
         disconnect : disconnect
