@@ -34,32 +34,17 @@
                 <button id="disconnect" class="secondary" disabled="disabled" onclick="wsclient.disconnect();">Disconnect</button>
             </p>
         </div>
-        <div id="container">
-            <div class="leftPanel">
-                <div id="onLineUsersPanel">
-                    <h3>Connected users:</h3>
-                    <ul id="onlineUsers">
-
-                    </ul>
-                </div>
-            </div>
-
-            <div id="conversations">
-                <ul>
-                </ul>
-            </div>
-        </div>
     </div>
     <footer>
-    <div id="footer">
-        <a href="http://www.exadel.com">
-            <i class="exadel-logo"></i>
-        </a>
-    </div>
-    <nav id="links">
-        <a href="/">About</a>
-        .©2013 Exadel Inc. All rights reserved.
-    </nav>
+        <div id="footer">
+            <a href="http://www.exadel.com">
+                <i class="exadel-logo"></i>
+            </a>
+        </div>
+        <nav id="links">
+            <a href="/">About</a>
+            .©2013 Exadel Inc. All rights reserved.
+        </nav>
     </footer>
   </body>
 </html>

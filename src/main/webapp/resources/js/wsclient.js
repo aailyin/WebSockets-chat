@@ -56,6 +56,8 @@ var wsclient = (function(){
                 }
             }
         }
+
+        document.location.replace("chat.jsp")
     }
 
     function disconnect() {
