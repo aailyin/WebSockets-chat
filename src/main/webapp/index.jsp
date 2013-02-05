@@ -16,11 +16,11 @@
   <body class="splash">
     <div id="wrap">
         <video id="splashVideo" class="spin" loop="loop" autoplay="autoplay" tabindex="0">
-            <source type="video/mp4" src="resources/img/video1.mp4.mp4">
+            <source type="video/mp4" src='resources/img/video1.mp4.mp4; codecs="avc1.42E01E, mp4a.40.2"'>
             </source>
-            <source type="video/webm" src="resources/img/video1.webm">
+            <source type="video/webm" src='resources/img/video1.webm; codecs="vp8, vorbis"'>
             </source>
-            <source type="video/ogg" src="resources/img/video1.ogv">
+            <source type="video/ogg" src='resources/img/video1.ogv; codecs="theora, vorbis"'>
             </source>
         </video>
         <div id="beta">
