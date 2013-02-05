@@ -82,16 +82,18 @@ var wsclient = (function(){
         onLineUserName.html(inputUsername.val());
         inputUsername.css({display:'none'});
         onLineUserName.css({visibility:'visible'});
-        $('#status').html('Connect');
-        $('#status').attr({class : 'connected'});
+        $('#online').css({visibility: 'visible'});
+        $('#splashVideo').css({visibility: 'hidden'});
+        $('#beta').css({visibility: 'hidden'});
         $('#onLineUsersPanel').css({visibility:'visible'});
     }
 
     function updateUserDisconnected() {
         $('.onLineUserName').css({visibility:'hidden'});
+        $('#online').css({visibility: 'hidden'});
+        $('#beta').css({visibility: 'visible'});
+        $('#splashVideo').css({visibility: 'visible'});
         $('#userName').css({display:''});
-        $('#status').html('Disconnect');
-        $('#status').attr({class : 'disconnected'});
         $('#onLineUsersPanel').css({visibility:'hidden'});
     }
 

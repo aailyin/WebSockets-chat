@@ -34,8 +34,18 @@ body {
     line-height: 1;
 }
 
+div#online {
+    font-family: BentonSans, "Lucida Sans", "Lucida Grande", sans-serif;
+    font-size: 1.75em;
+    color: #666;
+    visibility: hidden;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
 body.splash {
-    background-color: #000014;
+    background-color: #CCCCCC;
 }
 
 textarea {
@@ -52,6 +62,8 @@ textarea {
 button.secondary {
     margin-left: 15px;
     background-color: #959595;
+    float: right;
+    margin-right: 30px;
 }
 
 button {
@@ -138,7 +150,7 @@ button {
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 79px;
+    bottom: 74px;
     left: 0;
     overflow-y: hidden;
 }
@@ -227,7 +239,7 @@ div#conversations {
     height: 530px;
     font: 1.1em comic sans ms, sans-serif;
     visibility: hidden;
-    float: right;
+    float: left;
 }
 
 div#conversations div.conversation {

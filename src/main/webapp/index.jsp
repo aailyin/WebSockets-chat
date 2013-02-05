@@ -23,6 +23,10 @@
             <source type="video/ogg" src='resources/img/video1.ogv; codecs="theora, vorbis"'>
             </source>
         </video>
+         <div id="online">
+            Username: <span class="onLineUserName"></span>
+            <button id="disconnect" class="secondary" disabled="disabled" onclick="wsclient.disconnect();">Disconnect</button>
+        </div>
         <div id="beta">
             <h1>
                 Welcome to the
@@ -31,11 +35,10 @@
             </h1>
             <h3>Bulid on WebSockets Tomcat 7</h3>
             <p>Chat was built with style MySpace.com</p>
-            <span class="disconnected" id="status"></span>
-            Name: <input type="text" id="userName"/><span class="onLineUserName"></span>
+            Name: <input type="text" id="userName"/>
             <p class="actionContainer">
                 <button id="connect" onclick="wsclient.connect(document.getElementById('userName').value);">Connect</button>
-                <button id="disconnect" class="secondary" disabled="disabled" onclick="wsclient.disconnect();">Disconnect</button>
+
             </p>
         </div>
         <div id="container">
