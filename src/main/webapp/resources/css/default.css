@@ -1,7 +1,48 @@
 input {
-    border: 1px solid #AAA;
-    padding: 3px;
-    border-radius: 3px;
+    border: 2px solid #959595;
+    background-color: #CCCCCC;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    padding: 7px;
+    border-radius: 2px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.username-label-sliding {
+    position: absolute;
+    margin: 9px 9px 9px 12px;
+    padding: 0;
+    text-align: left;
+    font: normal;
+    color: #4169e1;
+}
+
+label {
+    color: #dddddd;
+}
+
+.separator {
+    border-bottom: 1px dashed #959595;
+    margin-bottom: 1em;
+    margin-right: 3em;
+    margin-top: 0;
+}
+
+#container {
+    margin-left: 3em;
+    margin-bottom: 3em;
+    margin-right: 5em;
+}
+
+.leftPanel {
+}
+
+.leftPanel > div#onLineUsersPanel > label {
+    border-bottom: 1px solid #444444;
+    color: #1c94c4;
 }
 
 div {
@@ -77,6 +118,7 @@ button {
     border-radius: 4px 4px 4px 4px;
     height: 40px;
     width: 100px;
+
 }
 
 #footer {
@@ -240,6 +282,7 @@ div#conversations {
     font: 1.1em comic sans ms, sans-serif;
     visibility: hidden;
     float: left;
+    margin-left: 3em;
 }
 
 div#conversations div.conversation {
@@ -277,6 +320,8 @@ span.onLineUserName {
     visibility: hidden;
 }
 
+
+
 ul#onlineUsers {
     padding: 0;
     margin: 5px 0;
@@ -289,7 +334,7 @@ ul#onlineUsers li a {
     padding: 3px;
     background: #ddd;
     color: #444;
-    margin: 2px 0;
+    margin: 2px 2em;
 }
 
 ul#onlineUsers li a:hover {

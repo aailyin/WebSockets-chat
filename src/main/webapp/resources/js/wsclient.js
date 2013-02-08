@@ -82,6 +82,10 @@ var wsclient = (function(){
         onLineUserName.html(inputUsername.val());
         inputUsername.css({display:'none'});
         onLineUserName.css({visibility:'visible'});
+        $('.leftPanel').css({
+            borderRight: '1px dashed #959595',
+            paddingRight: '3em'
+        });
         $('#online').css({visibility: 'visible'});
         $('#splashVideo').css({visibility: 'hidden'});
         $('#beta').css({visibility: 'hidden'});
@@ -89,6 +93,7 @@ var wsclient = (function(){
     }
 
     function updateUserDisconnected() {
+        $('.leftPanel').css({visibility:'hidden'});
         $('.onLineUserName').css({visibility:'hidden'});
         $('#online').css({visibility: 'hidden'});
         $('#beta').css({visibility: 'visible'});

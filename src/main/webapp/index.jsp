@@ -10,6 +10,27 @@
       <script type="text/javascript">
           $(function(){
               $('#conversations').tabs();
+
+              $('.username-label-sliding').animate({ opacity: "0.4" })
+                      .click(function() {
+                          var thisFor	= $(this).attr('for');
+                          $('.'+thisFor).focus();
+                      });
+
+              $('.username-sliding').focus(function() {
+
+                  $('.username-label-sliding').animate({ marginLeft: "4.4em" }, "fast");
+
+                  if($(this).val() == "username")
+                      $(this).val() == "";
+
+              }).blur(function() {
+
+                          if($(this).val() == "") {
+                              $(this).val() == "username";
+                              $('.username-label-sliding').animate({ marginLeft: "12px" }, "fast");
+                          }
+                      });
           });
       </script>
   </head>
@@ -24,9 +45,14 @@
             </source>
         </video>
          <div id="online">
-            Username: <span class="onLineUserName"></span>
-            <button id="disconnect" class="secondary" disabled="disabled" onclick="wsclient.disconnect();">Disconnect</button>
-        </div>
+            <table>
+                <tr>
+                    <td style="width: 106.5em">Username: <span class="onLineUserName"></span></td>
+                    <td style="float: right"><button id="disconnect" class="secondary" disabled="disabled" onclick="wsclient.disconnect();">Disconnect</button></td>
+                </tr>
+            </table>
+            <p class="separator"><br/></p>
+         </div>
         <div id="beta">
             <h1>
                 Welcome to the
@@ -35,16 +61,24 @@
             </h1>
             <h3>Bulid on WebSockets Tomcat 7</h3>
             <p>Chat was built with style MySpace.com</p>
-            Name: <input type="text" id="userName"/>
+            <table>
+                <tr>
+                    <td><label for="input-username">Name:</label></td>
+                    <td><form id="input-username">
+                        <label class="username-label-sliding" for="username-sliding">Username</label>
+                        <input type="text" id="userName" class="username-sliding" name="username" />
+                    </form></td>
+                </tr>
+            </table>
             <p class="actionContainer">
                 <button id="connect" onclick="wsclient.connect(document.getElementById('userName').value);">Connect</button>
-
             </p>
         </div>
         <div id="container">
             <div class="leftPanel">
+                <p class="separator-leftPanel"></p>
                 <div id="onLineUsersPanel">
-                    <h3>Connected users:</h3>
+                    <label for="onlineUsers"><h2>Connected users:</h2></label>
                     <ul id="onlineUsers">
 
                     </ul>
