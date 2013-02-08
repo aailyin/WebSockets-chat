@@ -84,7 +84,8 @@ var wsclient = (function(){
         onLineUserName.css({visibility:'visible'});
         $('.leftPanel').css({
             borderRight: '1px dashed #959595',
-            paddingRight: '3em'
+            paddingRight: '3em',
+            visibility: 'visible'
         });
         $('#online').css({visibility: 'visible'});
         $('#splashVideo').css({visibility: 'hidden'});
