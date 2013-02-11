@@ -195,6 +195,7 @@ button {
     bottom: 74px;
     left: 0;
     overflow-y: hidden;
+
 }
 
 #wrap {
@@ -277,12 +278,22 @@ span.connected {
 }
 
 div#conversations {
-    width: 360px;
+    width: 800px;
     height: 530px;
     font: 1.1em comic sans ms, sans-serif;
     visibility: hidden;
     float: left;
     margin-left: 3em;
+}
+
+.buttonTab {
+    background-color: #008DDE;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    height: 35px;
+    margin: 0 1em 0 0;
+    width: 80px;
 }
 
 div#conversations div.conversation {
@@ -311,8 +322,9 @@ p.messages div.message p {
 }
 
 div.conversation textarea {
-    width: 330px;
+    width: 780px;
     height: 60px;
+    margin-bottom: 0.5em;
 }
 
 span.onLineUserName {

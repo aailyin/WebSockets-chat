@@ -91,6 +91,7 @@ var wsclient = (function(){
         $('#splashVideo').css({visibility: 'hidden'});
         $('#beta').css({visibility: 'hidden'});
         $('#onLineUsersPanel').css({visibility:'visible'});
+        $('#wrap').css({overflowY: 'auto'});
     }
 
     function updateUserDisconnected() {
@@ -101,6 +102,9 @@ var wsclient = (function(){
         $('#splashVideo').css({visibility: 'visible'});
         $('#userName').css({display:''});
         $('#onLineUsersPanel').css({visibility:'hidden'});
+        $('#wrap').css({overflowY: 'hidden'});
+        $('html, body').css({height: '100%', scrollTop: '0'});
+        window.location.reload();
     }
 
     function cleanConnectedUsers() {
@@ -141,7 +145,8 @@ var wsclient = (function(){
 
     function createSendButton(name) {
         var conversationId = cleanWhitespaces(name) + 'conversation';
-        var button = $(document.createElement('button'));
+        var button = $(document.createElement('button')).addClass('buttonTab');
+
         button.html('Send');
         button.click(function () {
             var from = document.getElementById('userName').value;
@@ -161,7 +166,7 @@ var wsclient = (function(){
     }
 
     function createCloseButton(conversationId) {
-        var button = $(document.createElement('button'));
+        var button = $(document.createElement('button')).addClass('buttonTab');
         button.html('Close');
         button.click(function () {
             removeTab(conversationId);
@@ -222,3 +227,26 @@ var wsclient = (function(){
         disconnect : disconnect
     };
 })();
+
+/*Function for animation of input*/
+var inputSibling = (function (){
+    $('.username-label-sliding').animate({ opacity: "0.4" })
+        .click(function() {
+            var thisFor	= $(this).attr('for');
+            $('.'+thisFor).focus();
+        });
+
+    $('.username-sliding').focus(function() {
+
+        $('.username-label-sliding').animate({ marginLeft: "4.4em" }, "fast");
+
+        if($(this).val() == "username")
+            $(this).val("");
+
+    }).blur(function() {
+
+            if($(this).val() == "") {
+                $('.username-label-sliding').animate({ marginLeft: "12px" }, "fast");
+            }
+        });
+});
