@@ -10,27 +10,7 @@
       <script type="text/javascript">
           $(function(){
               $('#conversations').tabs();
-
-              $('.username-label-sliding').animate({ opacity: "0.4" })
-                      .click(function() {
-                          var thisFor	= $(this).attr('for');
-                          $('.'+thisFor).focus();
-                      });
-
-              $('.username-sliding').focus(function() {
-
-                  $('.username-label-sliding').animate({ marginLeft: "4.4em" }, "fast");
-
-                  if($(this).val() == "username")
-                      $(this).val() == "";
-
-              }).blur(function() {
-
-                          if($(this).val() == "") {
-                              $(this).val() == "username";
-                              $('.username-label-sliding').animate({ marginLeft: "12px" }, "fast");
-                          }
-                      });
+              inputSibling();
           });
       </script>
   </head>
