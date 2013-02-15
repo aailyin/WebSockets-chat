@@ -1,15 +1,10 @@
-/**
- * Created with IntelliJ IDEA.
- * User: ailyin
- * Date: 28.01.13
- * Time: 16:19
- * To change this template use File | Settings | File Templates.
- */
+/*Client for creating websocket chanel to send and to receive messages from server*/
 var wsclient = (function(){
 
     var ws = null;
     var wsURI = 'ws://'+location.host+'/chat';
 
+    /*Main function for connecting the client with server*/
     function connect(userName) {
 
         if(!userName || userName == ''){
@@ -66,6 +61,8 @@ var wsclient = (function(){
         setConnected(false);
     }
 
+    /*Set connect on server.
+    * @connected - true or false*/
     function setConnected(connected) {
         document.getElementById('connect').disabled = connected;
         document.getElementById('disconnect').disabled = !connected;
@@ -76,6 +73,9 @@ var wsclient = (function(){
             updateUserDisconnected();
         }
     }
+
+    /*Creating necessary elements on and adding styles and forms.
+    * Adding new users to the onLineUserPanel*/
     function updateUserConnected() {
         var inputUsername = $('#userName');
         var onLineUserName = $('.onLineUserName');
@@ -94,6 +94,7 @@ var wsclient = (function(){
         $('#wrap').css({overflowY: 'auto'});
     }
 
+    /*Disconnect from server. Adding necessary styles, to hide the elements*/
     function updateUserDisconnected() {
         $('.leftPanel').css({visibility:'hidden'});
         $('.onLineUserName').css({visibility:'hidden'});
@@ -119,6 +120,9 @@ var wsclient = (function(){
         return text.replace(/\s/g,"_");
     }
 
+    /*Creating new conversation with other user.
+     * Adding new tab on conversationPanel.
+     * @from - username*/
     function showConversation(from) {
         var conversations = $('#conversations');
         conversations.css({visibility:'visible'});
@@ -228,7 +232,7 @@ var wsclient = (function(){
     };
 })();
 
-/*Function for animation of input*/
+/*Function for animation of input element 'username'*/
 var inputSibling = (function (){
     $('.username-label-sliding').animate({ opacity: "0.4" })
         .click(function() {

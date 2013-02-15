@@ -135,14 +135,14 @@ button {
     z-index: 6;
 }
 
-#footer > a > .exadel-logo {
+#footer > a > .logo {
     float: left;
     margin-right: 20px;
     margin-top: 0;
 }
 
-.exadel-logo {
-    background-image: url("../img/exadel_logo.png");
+.logo {
+    background-image: url("../img/chat_icon.jpg");
     display: inline-block;
     height: 28px;
     width: 121px;

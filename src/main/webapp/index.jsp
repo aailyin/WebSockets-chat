@@ -37,7 +37,7 @@
             <h1>
                 Welcome to the
                 <br>
-                Exadel training chat
+                Simple training chat
             </h1>
             <h3>Bulid on WebSockets Tomcat 7</h3>
             <p>Chat was built with style MySpace.com</p>
@@ -74,12 +74,12 @@
     <footer>
         <div id="footer">
             <a href="http://www.exadel.com">
-                <i class="exadel-logo"></i>
+                <i class="logo"></i>
             </a>
         </div>
         <nav id="links">
             <a href="/">About</a>
-            .©2013 Exadel Inc. All rights reserved.
+            .©2013 Training chat.
         </nav>
     </footer>
   </body>
